@@ -20,17 +20,14 @@ namespace CustomLinkedList
             Node<T> add = new Node<T>(item);
             // No Items
             if (First == null)
-            {
                 First = add;
-                Last = add;
-            }
             // Theres already 1 item at least
             else
             {
                 Last.Next = add;
                 add.Previous = Last;
-                Last = add;
             }
+            Last = add;
         }
         public IEnumerator<T> GetEnumerator()
         {

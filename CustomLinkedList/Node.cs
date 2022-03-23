@@ -13,6 +13,10 @@ namespace CustomLinkedList
         public T Value;
         public Node<T> Previous, Next;
         public Node(T value)
-        { this.Value = value;}
+        { this.Value = value; }
+        public override string ToString() 
+        { 
+            return Value.ToString(); 
+        }
     }
 }

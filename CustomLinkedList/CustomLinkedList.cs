@@ -24,22 +24,12 @@ namespace CustomLinkedList
                 First = add;
                 Last = add;
             }
+            // Theres already 1 item at least
             else
             {
-                // Only 1 item
-                if (First == Last)
-                {
-                    First.Next = add;
-                    Last = add;
-                    Last.Previous = First;
-                }
-                // At least 2 items
-                else
-                {
-                    Last.Next = add;
-                    add.Previous = Last;
-                    Last = add;
-                }
+                Last.Next = add;
+                add.Previous = Last;
+                Last = add;
             }
         }
         public IEnumerator<T> GetEnumerator()
